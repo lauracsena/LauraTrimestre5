@@ -3,7 +3,7 @@
 
 <head>
     <title>Sistema de Gestión Odontológica</title>
-    <link rel="stylesheet" type="text/css" href="../Css/estilos.css">
+    <link rel="stylesheet" type="text/css" href="Vista/Css/estilos.css">
 </head>
 
 <body>

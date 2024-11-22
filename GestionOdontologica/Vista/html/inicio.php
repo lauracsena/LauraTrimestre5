@@ -3,7 +3,7 @@
 
 <head>
     <title>Sistema de Gestión Odontológica</title>
-    <link rel="stylesheet" type="text/css" href="../Css/estilos.css">
+    <link rel="stylesheet" type="text/css" href="Vista/Css/estilos.css">
 </head>
 
 <body>
@@ -12,7 +12,7 @@
             <h1>Sistema de Gestión Odontológica</h1>
         </div>
         <ul id="menu">
-            <li><a href="inicio.html">inicio</a> </li>
+            <li><a href="index.php">inicio</a> </li>
             <li><a href="index.php?accion=asignar">Asignar</a> </li>
             <li><a href="index.php?accion=consultar">Consultar Cita</a> </li>
             <li><a href="index.php?accion=cancelar">Cancelar Cita</a> </li>
