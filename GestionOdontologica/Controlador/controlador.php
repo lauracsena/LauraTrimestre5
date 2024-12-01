@@ -16,4 +16,9 @@ public function consultarCitas($doc){
     $result = $gestorCita->consultarCitasPorDocumento($doc);
     require_once 'Vista/html/consultarCitas.php';
     }
+    public function cancelarCitas($doc){
+        $gestorCita = new GestorCita();
+        $result = $gestorCita->consultarCitasPorDocumento($doc);
+        require_once 'Vista/html/cancelarCitas.php';
+        }
 }

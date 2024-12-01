@@ -37,6 +37,9 @@
         elseif($_GET["accion"] == "consultarCita"){
             $controlador->consultarCitas($_POST["consultarDocumento"]);
         }
+        elseif($_GET["accion"] == "cancelarCita"){
+            $controlador->cancelarCitas($_POST["cancelarDocumento"]);
+            }
     } else {
         $controlador->verPagina('Vista/html/inicio.php');
     }
