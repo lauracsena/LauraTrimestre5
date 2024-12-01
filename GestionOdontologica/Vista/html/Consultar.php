@@ -3,6 +3,8 @@
 <head>
 <title>Sistema de Gestión Odontológica</title>
 <link rel="stylesheet" type="text/css" href="Vista/Css/estilos.css">
+<script type="text/javascript" src="../html/Jquery/jquery-3.7.1.min.js"></script>
+<script type="text/javascript" src="../js/script.js"></script>
 </head>
 <body>
 <div id="contenedor">
