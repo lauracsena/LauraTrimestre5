@@ -5,8 +5,8 @@
     <title>Sistema de Gestión Odontológica</title>
     <link rel="stylesheet" type="text/css" href="Vista/Css/estilos.css">
     <script type="text/javascript" src="Vista/Jquery/jquery-3.7.1.min.js"></script>
-    <script src="Vista\Jquery\jquery-ui-1.14.1.custom" type="text/javascript"></script>
-    <link rel="stylesheet" href="Vista\Jquery\jquery-ui-1.14.1.custom" type="text/css">
+    <script src="Vista\Jquery\jquery-ui-1.14.1.custom\jquery-ui.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="Vista\Jquery\jquery-ui-1.14.1.custom\jquery-ui.min.css" type="text/css">
     <script type="text/javascript" src="Vista\js\script.js"></script>
 
 </head>
@@ -38,9 +38,7 @@
                                 id="asignarConsultar" onclick="consultarPaciente()"></td>
                     </tr>
                     <tr>
-                        <td colspan="2">
-                            <div id="paciente"></div>
-                        </td>
+                        <td colspan="2"> <div id="paciente" onclick="mostrarFormulario()"></div></td>
                     </tr>
                     <!--Select de medicos-->
                     <tr>
