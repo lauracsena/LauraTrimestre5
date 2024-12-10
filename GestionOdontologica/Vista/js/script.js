@@ -54,3 +54,12 @@ function consultarCita() {
         $("#consultarDocumento").val();
     $("#paciente2").load(url);
 }
+
+function confirmarCancelar(numero) {
+    if (confirm("Esta seguro de cancelar la cita " + numero)) {
+        $.get("index.php", { accion: 'confirmarCancelar', numero: numero }, function (mensaje) {
+            alert(mensaje);
+        });
+    }
+    $("#cancelarConsultar").trigger("click");
+}

@@ -21,7 +21,7 @@
         </ul>
         <div id="contenido">
             <h2>Consultar Cita</h2>
-            <form action="index.php?accion=consultarCita" method="get" id="frmconsultar">
+            <form action="index.php?accion=consultarCita" method="post" id="frmconsultar">
                 <table>
                     <tr>
                         <td>Documento del Paciente</td>
