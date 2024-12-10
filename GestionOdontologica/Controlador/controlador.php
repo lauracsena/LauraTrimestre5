@@ -74,6 +74,17 @@ class Controlador
     {
         $gestorCita = new GestorCita();
         $result = $gestorCita->consultarCitaPorId($cita);
-        require_once 'Vista/html/confirmarCita.php';
+        require_once 'Vista/html/ConfirmarCita.php';
+    }
+
+    public function confirmarCancelarCita($cita)
+    {
+        $gestorCita = new GestorCita();
+        $registros = $gestorCita->cancelarCita($cita);
+        if ($registros > 0) {
+            echo "La cita se ha cancelado con éxito";
+        } else {
+            echo "Hubo un error al cancelar la cita";
+        }
     }
 }

@@ -50,6 +50,8 @@
             $controlador->consultarHorasDisponibles($_GET["medico"], $_GET["fecha"]);
         } elseif ($_GET["accion"] == "verCita") {
             $controlador->verCita($_GET["numero"]);
+        } elseif ($_GET["accion"] == "confirmarCancelar") {
+            $controlador->confirmarCancelarCita($_GET["numero"]);
         }
     } else {
         $controlador->verPagina('Vista/html/inicio.php');

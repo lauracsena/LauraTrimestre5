@@ -102,7 +102,10 @@
 
             </form>
         </div>
-        <div id="frmPaciente" title="Agregar Nuevo Paciente">
+
+           <!--Formulario asgnar-->
+
+           <div id="frmPaciente" title="Agregar Nuevo Paciente">
             <form id="agregarPaciente">
                 <table>
                     <tr>
@@ -148,5 +151,4 @@
 
     </div>
 </body>
-
 </html>
