@@ -30,3 +30,21 @@ function insertarPaciente() {
 function cancelar() {
     $(this).dialog('close');
 }
+
+function cargarHoras() {
+    if (($("#medico").val() == -1) || ($("#fecha").val() == "")) {
+        $("#hora").html("<option value='-1' selected='selected'>--Selecione la hora </option > ")
+    } else {
+        queryString = "medico=" + $("#medico").val() + "&fecha=" + $("#fecha").val();
+        url = "index.php?accion=consultarHora&" + queryString;
+        $("#hora").load(url);
+    }
+}
+
+function seleccionarHora() {
+    if ($("#medico").val() == -1) {
+        alert("Debe seleccionar un médico");
+    } else if ($("#fecha").val() == "") {
+        alert("Debe seleccionar una fecha");
+    }
+}

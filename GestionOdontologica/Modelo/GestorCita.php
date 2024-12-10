@@ -88,4 +88,18 @@ class GestorCita
         $conexion->cerrar();
         return $result;
     }
+
+    public function consultarHorasDisponibles($medico, $fecha)
+    {
+        $conexion = new Conexion();
+        $conexion->abrir();
+        $sql = "SELECT hora FROM horas WHERE hora NOT IN "
+            . "( SELECT CitHora FROM citas WHERE CitMedico = '$medico' AND
+CitFecha = '$fecha'"
+            . " AND CitEstado = 'Solicitada') ";
+        $conexion->consulta($sql);
+        $result = $conexion->obtenerResult();
+        $conexion->cerrar();
+        return $result;
+    }
 }

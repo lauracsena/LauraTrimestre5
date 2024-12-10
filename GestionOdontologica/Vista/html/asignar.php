@@ -26,7 +26,6 @@
 
         <div id="contenido">
             <h2>Asignar cita</h2>
-            <p>Contenido de la página</p>
 
             <form id="frmasignar" action="index.php?accion=guardarCita" method="post">
                 <table>
@@ -43,34 +42,40 @@
                             <div id="paciente"></div>
                         </td>
                     </tr>
+                    <!--Select de medicos-->
                     <tr>
                         <td>Médico</td>
                         <td>
-                            <select id="medico" name="medico">
+                            <select id="medico" name="medico" onchange="cargarHoras()">
                                 <option value="-1" selected="selected">---Selecione el Médico</option>
-                                <option value="12345">12345-Pepito Pérez</option>
-                                <option value="67890">67890-Pepita Mendieta</option>
+                                <?php
+
+                                while ($fila = $result->fetch_object()) {
+                                ?>
+
+                                <option value=<?php echo $fila->MedIdentificacion; ?>>
+                                <?php echo $fila->MedIdentificacion . " " . $fila->MedNombres . " " . $fila->MedApellidos; ?>
+                                </option>
+                                <?php } ?>
                             </select>
                         </td>
                     </tr>
                     <tr>
                         <td>Fecha</td>
                         <td>
-                            <input type="date" id="fecha" name="fecha">
+                            <input type="date" id="fecha" name="fecha" onchange="cargarHoras()">
                         </td>
                     </tr>
+ <!--select dinamico horas-->
                     <tr>
                         <td>Hora</td>
                         <td>
-                            <select id="hora" name="hora">
+                        <select id="hora" name="hora" onmousedown="seleccionarHora()">
                                 <option value="-1" selected="selected">---Seleccione la hora ---</option>
-                                <option>08:00:00</option>
-                                <option>08:20:00</option>
-                                <option>08:40:00</option>
-                                <option>09:00:00</option>
                             </select>
                         </td>
                     </tr>
+
                     <tr>
                         <td>Consultorio</td>
                         <td>
