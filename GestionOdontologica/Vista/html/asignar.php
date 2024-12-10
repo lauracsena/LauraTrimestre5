@@ -53,9 +53,9 @@
                                 while ($fila = $result->fetch_object()) {
                                 ?>
 
-                                <option value=<?php echo $fila->MedIdentificacion; ?>>
-                                <?php echo $fila->MedIdentificacion . " " . $fila->MedNombres . " " . $fila->MedApellidos; ?>
-                                </option>
+                                    <option value=<?php echo $fila->MedIdentificacion; ?>>
+                                        <?php echo $fila->MedIdentificacion . " " . $fila->MedNombres . " " . $fila->MedApellidos; ?>
+                                    </option>
                                 <?php } ?>
                             </select>
                         </td>
@@ -66,24 +66,30 @@
                             <input type="date" id="fecha" name="fecha" onchange="cargarHoras()">
                         </td>
                     </tr>
- <!--select dinamico horas-->
+                    <!--select dinamico horas-->
                     <tr>
                         <td>Hora</td>
                         <td>
-                        <select id="hora" name="hora" onmousedown="seleccionarHora()">
+                            <select id="hora" name="hora" onmousedown="seleccionarHora()">
                                 <option value="-1" selected="selected">---Seleccione la hora ---</option>
                             </select>
                         </td>
                     </tr>
-
+                    <!--select consultorio DB-->
                     <tr>
                         <td>Consultorio</td>
                         <td>
-                            <select id="consultorio" name="consultorio">
-                                <option value="-1" selected="selected">---Seleccione el
-                                    Consultorio---</option>
-                                <option value="1">1 Consultas 1</option>
-                                <option value="2">2 Tratamientos 1</option>
+                            <select id="consultorio" name="consultorio" onchange="cargarHoras()">
+                                <option value="-1" selected="selected">---Seleccione el Consultorio---</option>
+                                <?php
+                                while ($fila = $result2->fetch_object()) {
+                                ?>
+                                    <option value=<?php echo $fila->ConNumero; ?>>
+                                        <?php echo $fila->ConNumero . " - " . $fila->ConNombre;
+
+                                        ?>
+                                    </option>
+                                <?php } ?>
                             </select>
                         </td>
                     </tr>

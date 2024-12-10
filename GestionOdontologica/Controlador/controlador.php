@@ -56,6 +56,7 @@ class Controlador
     {
         $gestorCita = new GestorCita();
         $result = $gestorCita->consultarMedicos();
+        $result2 = $gestorCita->consultarConsultorios();
         require_once 'Vista/html/asignar.php';
     }
 
@@ -67,5 +68,12 @@ class Controlador
             $fecha
         );
         require_once 'Vista/html/consultarHoras.php';
+    }
+
+    public function verCita($cita)
+    {
+        $gestorCita = new GestorCita();
+        $result = $gestorCita->consultarCitaPorId($cita);
+        require_once 'Vista/html/confirmarCita.php';
     }
 }

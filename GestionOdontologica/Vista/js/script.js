@@ -48,3 +48,9 @@ function seleccionarHora() {
         alert("Debe seleccionar una fecha");
     }
 }
+
+function consultarCita() {
+    url = "index.php?accion=consultarCita&consultarDocumento=" +
+        $("#consultarDocumento").val();
+    $("#paciente2").load(url);
+}

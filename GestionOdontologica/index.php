@@ -33,7 +33,7 @@
                 $_POST["consultorio"]
             );
         } elseif ($_GET["accion"] == "consultarCita") {
-            $controlador->consultarCitas($_POST["consultarDocumento"]);
+            $controlador->consultarCitas($_GET["consultarDocumento"]);
         } elseif ($_GET["accion"] == "cancelarCita") {
             $controlador->cancelarCitas($_POST["cancelarDocumento"]);
         } elseif ($_GET["accion"] == "consultarPaciente") {
@@ -46,10 +46,11 @@
                 $_GET["PacNacimiento"],
                 $_GET["PacSexo"]
             );
-        }
-        elseif($_GET["accion"] == "consultarHora"){
+        } elseif ($_GET["accion"] == "consultarHora") {
             $controlador->consultarHorasDisponibles($_GET["medico"], $_GET["fecha"]);
-            }
+        } elseif ($_GET["accion"] == "verCita") {
+            $controlador->verCita($_GET["numero"]);
+        }
     } else {
         $controlador->verPagina('Vista/html/inicio.php');
     }

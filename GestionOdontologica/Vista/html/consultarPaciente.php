@@ -30,8 +30,7 @@ while($fila=$result->fetch_object()){
 else {
 ?>
 <p>El paciente no existe en la base de datos.</p>
-<input type="button" name="ingPaciente" id="ingPaciente" value="Ingresar
-Paciente" onclik="ingPaciente()">
+<input type="button" name="ingPaciente" id="ingPaciente" value="Ingresar Paciente" onclik="ingPaciente()">
 <?php
 }
 ?>
