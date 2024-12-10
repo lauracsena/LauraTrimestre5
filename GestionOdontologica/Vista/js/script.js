@@ -49,9 +49,13 @@ function seleccionarHora() {
     }
 }
 
-function consultarCita() {
-    url = "index.php?accion=consultarCita&consultarDocumento=" +
-        $("#consultarDocumento").val();
+function consultarCita(event) {
+    event.preventDefault();
+    var documento = $("#consultarDocumento").val();
+    if (!documento) {
+        alert("Por favor, ingrese el documento del paciente.");
+        return;
+    } var url = "index.php?accion=consultarCita&consultarDocumento=" + documento;
     $("#paciente2").load(url);
 }
 
