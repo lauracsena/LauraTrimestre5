@@ -26,4 +26,14 @@ public function consultarCitas($doc){
             $result = $gestorCita->consultarPaciente($doc);
             require_once 'Vista/html/consultarPaciente.php';
             }
+            public function agregarPaciente($doc,$nom,$ape,$fec,$sex){
+                $paciente = new Paciente($doc, $nom, $ape, $fec, $sex);
+                $gestorCita = new GestorCita();
+                $registros = $gestorCita->agregarPaciente($paciente);
+                if($registros > 0){
+                    echo "Se insertó el paciente con exito";
+} else {
+echo "Error al grabar el paciente";
+}
+}
 }

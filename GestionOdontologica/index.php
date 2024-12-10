@@ -43,6 +43,15 @@
         elseif($_GET["accion"] == "consultarPaciente"){
             $controlador->consultarPaciente($_GET["documento"]);
             }
+            elseif($_GET["accion"] == "ingresarPaciente"){
+                $controlador->agregarPaciente(
+                $_GET["PacDocumento"],
+                $_GET["PacNombres"],
+                $_GET["PacApellidos"],
+                $_GET["PacNacimiento"],
+                $_GET["PacSexo"]
+                );
+                }
     } else {
         $controlador->verPagina('Vista/html/inicio.php');
     } 
